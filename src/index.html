@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="img/amazon.ico" type="image/x-icon">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Clone Amazon</title>
+</head>
+<body>
+    <header>
+        <div class="grid text-white">
+            <!--Header Superior-->
+            <div class="flex flex-wrap items-center px-2 py-1 md:flex-no-wrap bg-dark-blue-900">
+                <div class="flex px-2 py-1 border border-transparent rounded hover:border-white">
+                    <img src="img/amazon_logo.png" alt="Amazon" class="m-1 h-7">
+                    <span class="pt-1 pl-1 text-xs font-bold">.com.br</span>
+                </div>
+                <div class="hidden p-2 pb-1 ml-1 text-xs border border-transparent rounded-sm md:block hover:border-white">
+                    <p class="ml-3 font-bold leading-3">Olá,</p>
+                    <p class="text-sm font-black"><i class="fas fa-map-marker-alt"> </i> Selecione o endereço</p>
+                </div>
+                <div class="flex-grow order-2 w-full pt-1 md:w-auto md:ml-3 mr:0 md:order-none">
+                    <form action="" class="flex">
+                      <select name="" id="" class="hidden p-2 text-xs text-gray-700 bg-gray-100 border-r border-gray-500 rounded-tl rounded-bl md:block hover:bg-gray-300">
+                        <option value="">Livros</option>
+                      </select>
+                      <input type="text" class="flex-grow p-2 rounded-l md:rounded-none">
+                      <button class="px-4 rounded-tr rounded-br bg-gold-100 hover:bg-gold-200">
+                        <i class="mt-1 text-xl fas fa-search text-dark-blue-900"></i>
+                      </button>
+                    </form>
+                </div>
+                <div class="hidden p-2 pb-1 ml-1 text-xs border border-transparent rounded-sm md:block hover:border-white">
+                    <p class="font-bold leading-3">Olá, faça seu login</p>
+                    <p class="text-sm font-black">Contas e Listas <i class="fas fa-chevron-down"></i></p>
+                </div>
+                <div class="hidden p-2 pb-1 text-xs border border-transparent rounded-sm md:block hover:border-white">
+                    <p class="font-bold leading-3">Devoluções</p>
+                    <p class="text-sm font-black">e Pedidos</i></p>
+                </div>
+                <div class="hidden p-2 pb-1 text-xs border border-transparent rounded-sm md:block hover:border-white">
+                    <p class="font-bold leading-3">Experimente</p>
+                    <p class="text-sm font-black">Prime<i class="fas fa-chevron down"></i></p>
+                </div>
+                <div class="absolute top-0 right-0 order-1 p-2 mt-2 mr-2 border border-transparent rounded-sm hover:border-white md:mr-0 md:t-0 md:relative md:order-none md:flex">
+                    <i class="flex text-2xl fas fa-shopping-cart md:mr-2"></i>
+                    <span class="absolute top-0 left-0 w-6 h-6 ml-4 -mt-1 text-base text-center rounded-full bold text-gold-200 bg-dark-blue-600">0</span>
+                    <span class="hidden text-sm font-extrabold md:flex">Carrinho</span>
+                  </div>
+            </div>
+            <!--Header Intermediário-->
+            <div class="flex items-center py-1 bg-dark-blue-600 text-sm-px-2">
+                <div class="flex items-center px-2 py-2 border border-transparent rounded-sm hover:border-white md:py-0">
+                    <div class="mt-1 ml-3 mr-1">
+                       <i class="text-xl fas fa-bars"></i>
+                    </div>
+                    <div class="flex text-sm font-semibold leading-tight md:block">
+                        <p class="mx-1 md:mx-0">Todos</p>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <nav>
+                        <ul class="flex ml-3 text-sm">
+                          <li class="px-3 py-1 mr-4 font-semibold border border-transparent rounded-sm hover:border-white">
+                            <a href="#">Venda na Amazon</a>
+                          </li>
+                          <li class="px-3 py-1 mr-4 font-semibold border border-transparent rounded-sm hover:border-white">
+                            <a href="#">Mais Vendidos</a>
+                          </li>
+                          <li class="px-3 py-1 mr-4 font-semibold border border-transparent rounded-sm hover:border-white">
+                            <a href="#">Livros</a>
+                          </li>
+                          <li class="px-3 py-1 mr-4 font-semibold border border-transparent rounded-sm hover:border-white">
+                            <a href="#">Atendimento ao Cliente</a>
+                          </li>
+                          <li class="px-3 py-1 mr-4 font-semibold border border-transparent rounded-sm hover:border-white">
+                            <a href="#">Amazon Moda</a>
+                          </li>
+                          <li class="px-3 py-1 mr-4 font-semibold border border-transparent rounded-sm hover:border-white">
+                            <a href="#">Ofertas do Dia</a>
+                          </li>
+                          <li class="px-3 py-1 mr-4 font-semibold border border-transparent rounded-sm hover:border-white">
+                            <a href="#">Lançamentos</a>
+                          </li>
+                          <li class="px-3 py-1 mr-4 font-semibold border border-transparent rounded-sm hover:border-white">
+                            <a href="#">Computadores</a>
+                          </li>
+                          <li class="px-3 py-1 mr-4 font-semibold border border-transparent rounded-sm hover:border-white">
+                            <a href="#">Eletrônicos</a>
+                          </li>
+                          <li class="px-3 py-1 mr-4 font-semibold border border-transparent rounded-sm hover:border-white">
+                            <a href="#">Games</a>
+                          </li>
+                          <li class="px-3 py-1 mr-4 font-semibold border border-transparent rounded-sm hover:border-white">
+                            <a href="#">Ideias para Presente</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </nav>
+                </div>
+            </div>
+            <!--Header Inferior-->
+             <div class="flex px-4 py-1 text-xs text-black bg-gray-100 border-b border-gray-300">
+                 <a href="" class="block py-2 font-bold md:hidden">
+                     <i class="fas fa-chevron-left"></i> Todos os departamentos
+                 </a>
+                 <ul class="hidden md:flex">
+                     <li class="px-3 py-1 font-semibold border-b-2 border-transparent hover:text-orange-650 hover:border-orange-650">
+                         Livros
+                     </li>
+                     <li class="px-3 py-1 border-b-2 border-transparent hover:text-orange-650 hover:border-orange-650">
+                        Pesquisa avançada
+                    </li>
+                    <li class="px-3 py-1 border-b-2 border-transparent hover:text-orange-650 hover:border-orange-650">
+                        Livros em Oferta
+                    </li>
+                    <li class="px-3 py-1 border-b-2 border-transparent hover:text-orange-650 hover:border-orange-650">
+                        Inglês e Outras Línguas
+                    </li>
+                    <li class="px-3 py-1 border-b-2 border-transparent hover:text-orange-650 hover:border-orange-650">
+                        Loja Geek
+                    </li>
+                    <li class="px-3 py-1 border-b-2 border-transparent hover:text-orange-650 hover:border-orange-650">
+                        Universitários e Acadêmicos
+                    </li>
+                    <li class="px-3 py-1 border-b-2 border-transparent hover:text-orange-650 hover:border-orange-650">
+                        Didáticos e Escolares
+                    </li>
+                    <li class="px-3 py-1 border-b-2 border-transparent hover:text-orange-650 hover:border-orange-650">
+                        Loja Infantil
+                    </li>
+                    <li class="px-3 py-1 border-b-2 border-transparent hover:text-orange-650 hover:border-orange-650">
+                        Exclusivos
+                    </li>
+                 </ul>
+             </div>
+        </div>
+    </header>
+    <main>
+        <div class="grid grid-cols-8">
+            <!--Navbar Esquerda-->
+            <div class="hidden h-screen col-span-1 pt-2 pl-4 my-2 text-xs border-r border-gray-300 md:block">
+             <h3 class="text-sm font-semibold">Destaque em Livros</h3>   
+             <ul class="pl-2 mb-2">
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <a href="">Indicações Amazon</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Inglês e Outras Línguas</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Livros em Oferta</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Mais Vendidos do Mês</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Pré-venda e Lançamentos</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Livros Exclusivos Amazon</a>
+                </li>
+             </ul>
+             <h3 class="text-sm font-semibold">Páginas Especiais</h3>   
+             <ul class="pl-2 mb-2">
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <a href="">Livros Clássicos</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Livros Que Viraram Filmes</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Loja Geek</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Vozes Negras</a>
+                </li>
+             </ul>
+             <h3 class="text-sm font-semibold">Livros Educacionais</h3>   
+             <ul class="pl-2 mb-2">
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <a href="">Didáticos e Escolares</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Estudo e Ensino de Idiomas</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Exames e Concursos</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Importados para Exames</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Universitários e Acadêmicos</a>
+                </li>
+             </ul>
+             <h3 class="text-sm font-semibold">Kindle</h3>   
+             <ul class="pl-2 mb-2">
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <a href="">Acessórios Kindle</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Comprar Kindle</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">eBooks em Inglês</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">eBooks em Oferta</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Kindle Unlimited</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Todos os eBooks</a>
+                </li>
+             </ul>
+             <h3 class="text-sm font-semibold">Novidades</h3>   
+             <ul class="pl-2 mb-2">
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <a href="">Últimos 90 dias</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Últimos 30 dias</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Pré-venda</a>
+                </li>
+             </ul>
+             <h3 class="text-sm font-semibold">Departamento</h3>
+             <h4 class="ml-2 text-sm font-semibold">Livros</h4>
+             <ul class="pl-2 mb-2">
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <a href="">Literatura e Ficção</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Religião e Espiritualidade</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Romance</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Inglês e Outras Línguas</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Saúde e Família</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Política, Filosofia e Ciências Sociais</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">HQs, Mangás e Graphic Novels</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Educação, Referência e Didáticos</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Administração, Negócios e Economia</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Fantasia, Horror e Ficção Científica</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Autoajuda</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Infantil</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Jovens e Adolescentes</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Biografias e Histórias Reais</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">História</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Policial, Suspense e Mistério</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Ciências</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Direito</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Arte, Cinema e Fotografia</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Erótico</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Computação, Informática e Mídias Digitais</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Crônicas, Humor e Entretenimento</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Medicina</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Gastronomia e Culinária</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Engenharia e Transporte</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Artesanato, Casa e Estilo de Vida</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Esportes e Lazer</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Turismo e Guias de Viagem</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">LGBT</a>
+                </li>
+             </ul>
+             <h3 class="text-sm font-semibold">Formato</h3>   
+             <ul class="pl-2 mb-2">
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <a href="">Livros Impressos</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Capa Comum</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">eBook Kindle</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Capa Dura</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Box e Coleções</a>
+                </li>
+                </ul>
+                <h3 class="text-sm font-semibold">Autor</h3>   
+             <ul class="pl-2 mb-2">
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <a href="">Henry Bugalho</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">L. C. Almeida</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Christine King</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Fernanda Freitas</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Vi Keeland</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Penelope Ward</a>
+                </li>
+                <li class="text-gray-800 hover:text-orange-650">
+                    <a href="">Maeve Sahad</a>
+                </li>
+                </ul>
+                <h3 class="text-sm font-semibold">Série</h3>   
+             <ul class="pl-2 mb-2">
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <input type="checkbox" name="SobreNos" id="SobreNos" class="pt-1 mr-2 rounded"><label for="SobreNos">Sobre Nós</label>
+                </li>
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <input type="checkbox" name="Classicos" id="Classicos" class="pt-1 mr-2 rounded"><label for="Classicos">Clássicos da literatura mundial</label>
+                </li>
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <input type="checkbox" name="Pegada" id="Pegada" class="pt-1 mr-2 rounded"><label for="Pegada">Na Pegada</label>
+                </li>
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <input type="checkbox" name="Mafia" id="Mafia" class="pt-1 mr-2 rounded"><label for="Mafia">SÉRIE CHEFES DA MÁFIA</label>
+                </li>
+                 <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <input type="checkbox" name="Road" id="Road" class="pt-1 mr-2 rounded"><label for="Road">Black Road</label>
+                </li>
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <input type="checkbox" name="Chicago" id="Chicago" class="pt-1 mr-2 rounded"><label for="Chicago">Chicago</label>
+                </li>
+                <li class="pt-2 text-gray-800 hover:text-orange-650">
+                    <input type="checkbox" name="Destinados" id="Destinados" class="pt-1 mr-2 rounded"><label for="Destinados">Destinados</label>
+                </li>
+                </ul>
+                <h3 class="text-sm font-semibold">Idiomas</h3>
+                <ul class="pl-2 mb-2">
+                    <li class="pt-2 text-gray-800 hover:text-orange-650">
+                        <input type="checkbox" name="PT" id="PT" class="pt-1 mr-2 rounded"><label for="PT">Português</label>
+                    </li>
+                    <li class="pt-2 text-gray-800 hover:text-orange-650">
+                        <input type="checkbox" name="ING" id="ING" class="pt-1 mr-2 rounded"><label for="ING">Inglês</label>
+                    </li>
+                    <li class="pt-2 text-gray-800 hover:text-orange-650">
+                        <input type="checkbox" name="ESP" id="ESP" class="pt-1 mr-2 rounded"><label for="ESP">Espanhol</label>
+                    </li>
+                    <li class="pt-2 text-gray-800 hover:text-orange-650">
+                        <input type="checkbox" name="FR" id="FR" class="pt-1 mr-2 rounded"><label for="FR">Francês</label>
+                    </li>
+                     <li class="pt-2 text-gray-800 hover:text-orange-650">
+                        <input type="checkbox" name="ITA" id="ITA" class="pt-1 mr-2 rounded"><label for="ITA">Italiano</label>
+                    </li>
+                    <li class="pt-2 text-gray-800 hover:text-orange-650">
+                        <input type="checkbox" name="CHI" id="CHI" class="pt-1 mr-2 rounded"><label for="CHI">Chinês</label>
+                    </li>
+                    <li class="pt-2 text-gray-800 hover:text-orange-650">
+                        <input type="checkbox" name="ALE" id="ALE" class="pt-1 mr-2 rounded"><label for="ALE">Alemão</label>
+                    </li>
+                    </ul>
+            </div>
+            <!--Conteudo-->
+            <div class="col-span-8 p-2 md:col-span-7 sm:col-span-7">
+                <div class="flex flex-col">
+                  <!--Titulos e Categorias-->  
+                  <div class="text-center">
+                      <h2 class="text-2xl font-bold md:text-3xl md:font-normal md:pb-6">Loja de Livros</h2>
+                      <ul class="flex flex-wrap justify-center px-4 pb-2 md:text-sm md:flex-no-wrap md:px-0">
+                          <li>
+                              <a href="" class="px-2 text-blue-900 border-r border-black hover:text-orange-650 hover:underline">
+                                  Livros em Oferta
+                                </a>
+                          </li>
+                          <li>
+                            <a href="" class="px-2 text-blue-900 border-r border-black hover:text-orange-650 hover:underline">
+                                Livros Internacionais 
+                              </a>
+                        </li>
+                        <li>
+                            <a href="" class="px-2 text-blue-900 border-r border-black hover:text-orange-650 hover:underline">
+                                Lançamentos
+                              </a>
+                        </li>
+                        <li>
+                            <a href="" class="px-2 text-blue-900 border-r border-black hover:text-orange-650 hover:underline">
+                                Universitários
+                              </a>
+                        </li>
+                        <li>
+                            <a href="" class="px-2 text-blue-900 border-r border-black hover:text-orange-650 hover:underline">
+                                Didáticos e Escolares
+                              </a>
+                        </li>
+                        <li>
+                            <a href="" class="px-2 text-blue-900 border-r border-black hover:text-orange-650 hover:underline">
+                                HQs e Mangás
+                              </a>
+                        </li>
+                        <li>
+                            <a href="" class="px-2 text-blue-900 border-r border-black hover:text-orange-650 hover:underline">
+                                Mais Vendidos
+                              </a>
+                        </li>
+                        <li>
+                            <a href="" class="px-2 text-blue-900 border-r border-black hover:text-orange-650 hover:underline">
+                                Livros Infantis
+                              </a>
+                        </li>
+                        <li>
+                            <a href="" class="px-2 text-blue-900 border-r border-black hover:text-orange-650 hover:underline">
+                                Indicações
+                              </a>
+                        </li>
+                        <li>
+                            <a href="" class="px-2 text-blue-900 hover:text-orange-650 hover:underline">
+                                eBooks Kindle
+                              </a>
+                        </li>
+                      </ul>
+                      <div class="h-2 border-b shadow-sm"></div>
+                  </div>
+                  <!--Promoções e Categorias-->
+                  <div class="md:ml-12 md:mt-14 md:block">
+                      <img src="img/banner_promo.jpg" alt="Promoções">
+                  </div>
+                  <div class="flex flex-col items-center py-1 my-8 md:flex-row">
+                    <p class="font-bold leading-5 text-center border-gray-300 md:ml-14 md:w-3/4 md:border-r-2">Amazon Prime: Benefícios de leitura com o Prime Reading, frete GRÁTIS sem valor mínimo de compra e muito mais por apenas R$ 9,90/mês.</p>
+                    <a href="" class="items-center block w-full h-12 px-2 py-3 mt-3 ml-4 mr-4 text-sm text-center bg-yellow-400 border-yellow-700 rounded md:mt-0 md:text-xs md:py-0 md:ml-10 md:h-8 md:flex md:w-auto">TESTE GRÁTIS por 30 dias</a>
+                  </div>
+                  <div class="md:ml-12 :mt-2 md:block">
+                    <img src="img/banner_promo2.jpg" alt="Promoções">
+                </div>
+                <div class="h-2 mt-2 border-b shadow-sm"></div>
+                </div>
+                <!--Catálogo-->
+                <div class="flex flex-col">
+                    <div class="flex justify-between px-4 py-2 text-sm">
+                        <p>Mostrando 1-32 de 122 resultados</p>
+                        <div class="flex md:flex-none">
+                            <span>Ordenar por</span>
+                            <select class="px-1 pr-4 ml-3 text-xs bg-gray-100 border border-gray-400 rounded-md shadow-2xl md:pr-12 hover:bg-gray-300">
+                                <option>Destaques</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap mb-10 border border-gray-300 divide-x divide-gray-300">
+                        <div class="flex flex-col w-1/2 px-8 py-4 border-b border-gray-300 md:w-1/4">
+                            <img src="img/livro1.jpg" alt="Livro 1" class="p-2 h-210 place-self-center">
+                            <p class="mt-10 text-red-700">R$ 43,10</p>
+                            <P class="TEXT-SM MB-2">de: <span class="line-through">R$ 89,90 </span> (52% off)</P>
+                            <p class="mb-2 text-xs text-gray-700">Termina em 2:09:46</p>
+                            <a href="" class="text-sm text-blue-900 hover:underline hover:text-orange-650 MB-2">Duna: 1</a>
+                            <p class="mb-8 text-sm">Esta oferta é exclusiva para membros do <a href="" class="text-xs text-blue-600 hover:underline hover:text-orange-650">Amazon Prime.</a></p>
+                            <button class="py-2 mx-3 text-xs bg-yellow-400 border border-yellow-500 rounded-md hover:bg-gold-200">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="flex flex-col w-1/2 px-8 py-4 border-b border-gray-300 md:w-1/4">
+                            <img src="img/livro2.jpg" alt="Livro 1" class="p-2 h-210 place-self-center">
+                            <p class="mt-10 text-red-700">R$ 39,90</p>
+                            <P class="TEXT-SM MB-2">de: <span class="line-through">R$ 49,90 </span> (20% off)</P>
+                            <p class="mb-2 text-xs text-gray-700">Termina em 2:09:46</p>
+                            <a href="" class="text-sm text-blue-900 hover:underline hover:text-orange-650 MB-2">Haikyu! Vol. 01 </a>
+                            <p class="mb-8 text-sm">Esta oferta é exclusiva para membros do <a href="" class="text-xs text-blue-600 hover:underline hover:text-orange-650">Amazon Prime.</a></p>
+                            <button class="py-2 mx-3 text-xs bg-yellow-400 border border-yellow-500 rounded-md hover:bg-gold-200">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="flex flex-col w-1/2 px-8 py-4 border-b border-gray-300 md:w-1/4">
+                            <img src="img/livro3.jpg" alt="Livro 1" class="p-2 h-210 place-self-center">
+                            <p class="mt-10 text-red-700">R$ 39,50</p>
+                            <P class="TEXT-SM MB-2">de: <span class="line-through">R$ 49,90 </span> (21% off)</P>
+                            <p class="mb-2 text-xs text-gray-700">Termina em 2:09:46</p>
+                            <a href="" class="text-sm text-blue-900 hover:underline hover:text-orange-650 MB-2">Amor & Azeitonas</a>
+                            <p class="mb-8 text-sm">Esta oferta é exclusiva para membros do <a href="" class="text-xs text-blue-600 hover:underline hover:text-orange-650">Amazon Prime.</a></p>
+                            <button class="py-2 mx-3 text-xs bg-yellow-400 border border-yellow-500 rounded-md hover:bg-gold-200">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="flex flex-col w-1/2 px-8 py-4 border-b border-gray-300 md:w-1/4">
+                            <img src="img/livro4.jpg" alt="Livro 1" class="p-2 h-210 place-self-center">
+                            <p class="mt-10 text-red-700">R$ 49,90</p>
+                            <P class="TEXT-SM MB-2">de: <span class="line-through">R$ 69,90 </span> (52% off)</P>
+                            <p class="mb-2 text-xs text-gray-700">Termina em 2:09:46</p>
+                            <a href="" class="text-sm text-blue-900 hover:underline hover:text-orange-650 MB-2">1984 - Edição de Luxo</a>
+                            <p class="mb-8 text-sm">Esta oferta é exclusiva para membros do <a href="" class="text-xs text-blue-600 hover:underline hover:text-orange-650">Amazon Prime.</a></p>
+                            <button class="py-2 mx-3 text-xs bg-yellow-400 border border-yellow-500 rounded-md hover:bg-gold-200">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="flex flex-col w-1/2 px-8 py-4 border-b border-gray-300 md:w-1/4">
+                            <img src="img/livro5.jpg" alt="Livro 1" class="p-2 h-210 place-self-center">
+                            <p class="mt-10 text-red-700">R$ 25,90</p>
+                            <P class="TEXT-SM MB-2">de: <span class="line-through">R$ 44,90 </span> (42% off)</P>
+                            <p class="mb-2 text-xs text-gray-700">Termina em 2:09:46</p>
+                            <a href="" class="text-sm text-blue-900 hover:underline hover:text-orange-650 MB-2">Harry Potter e a Pedra Filosofal</a>
+                            <p class="mb-8 text-sm">Esta oferta é exclusiva para membros do <a href="" class="text-xs text-blue-600 hover:underline hover:text-orange-650">Amazon Prime.</a></p>
+                            <button class="py-2 mx-3 text-xs bg-yellow-400 border border-yellow-500 rounded-md hover:bg-gold-200">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="flex flex-col w-1/2 px-8 py-4 border-b border-gray-300 md:w-1/4">
+                            <img src="img/livro6.jpg" alt="Livro 1" class="p-2 h-210 place-self-center">
+                            <p class="mt-10 text-red-700">R$ 35,92</p>
+                            <P class="TEXT-SM MB-2">de: <span class="line-through">R$ 44,90 </span> (20% off)</P>
+                            <p class="mb-2 text-xs text-gray-700">Termina em 2:09:46</p>
+                            <a href="" class="text-sm text-blue-900 hover:underline hover:text-orange-650 MB-2">Daisy Jones and The Six</a>
+                            <p class="mb-8 text-sm">Esta oferta é exclusiva para membros do <a href="" class="text-xs text-blue-600 hover:underline hover:text-orange-650">Amazon Prime.</a></p>
+                            <button class="py-2 mx-3 text-xs bg-yellow-400 border border-yellow-500 rounded-md hover:bg-gold-200">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="flex flex-col w-1/2 px-8 py-4 border-b border-gray-300 md:w-1/4">
+                            <img src="img/livro7.jpg" alt="Livro 1" class="p-2 h-210 place-self-center">
+                            <p class="mt-10 text-red-700">R$ 38,79</p>
+                            <P class="TEXT-SM MB-2">de: <span class="line-through">R$ 49,90 </span> (22% off)</P>
+                            <p class="mb-2 text-xs text-gray-700">Termina em 2:09:46</p>
+                            <a href="" class="text-sm text-blue-900 hover:underline hover:text-orange-650 MB-2">As Provações de Apolo - O Oráculo Oculto</a>
+                            <p class="mb-8 text-sm">Esta oferta é exclusiva para membros do <a href="" class="text-xs text-blue-600 hover:underline hover:text-orange-650">Amazon Prime.</a></p>
+                            <button class="py-2 mx-3 text-xs bg-yellow-400 border border-yellow-500 rounded-md hover:bg-gold-200">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="flex flex-col w-1/2 px-8 py-4 border-b border-gray-300 md:w-1/4">
+                            <img src="img/livro8.jpg" alt="Livro 1" class="p-2 h-210 place-self-center">
+                            <p class="mt-10 text-red-700">R$ 41,09</p>
+                            <P class="TEXT-SM MB-2">de: <span class="line-through">R$ 54,90 </span> (25% off)</P>
+                            <p class="mb-2 text-xs text-gray-700">Termina em 2:09:46</p>
+                            <a href="" class="text-sm text-blue-900 hover:underline hover:text-orange-650 MB-2">Coraline</a>
+                            <p class="mb-8 text-sm">Esta oferta é exclusiva para membros do <a href="" class="text-xs text-blue-600 hover:underline hover:text-orange-650">Amazon Prime.</a></p>
+                            <button class="py-2 mx-3 text-xs bg-yellow-400 border border-yellow-500 rounded-md hover:bg-gold-200">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="flex flex-col w-1/2 px-8 py-4 border-b border-gray-300 md:w-1/4">
+                            <img src="img/livro9.jpg" alt="Livro 1" class="p-2 h-210 place-self-center">
+                            <p class="mt-10 text-red-700">R$ 29,90</p>
+                            <P class="TEXT-SM MB-2">de: <span class="line-through">R$ 99,90 </span> (70% off)</P>
+                            <p class="mb-2 text-xs text-gray-700">Termina em 2:09:46</p>
+                            <a href="" class="text-sm text-blue-900 hover:underline hover:text-orange-650 MB-2">As Crônicas de Nárnia</a>
+                            <p class="mb-8 text-sm">Esta oferta é exclusiva para membros do <a href="" class="text-xs text-blue-600 hover:underline hover:text-orange-650">Amazon Prime.</a></p>
+                            <button class="py-2 mx-3 text-xs bg-yellow-400 border border-yellow-500 rounded-md hover:bg-gold-200">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="flex flex-col w-1/2 px-8 py-4 border-b border-gray-300 md:w-1/4">
+                            <img src="img/livro10.jpg" alt="Livro 1" class="p-2 h-210 place-self-center">
+                            <p class="mt-10 text-red-700">R$ 59,16</p>
+                            <P class="TEXT-SM MB-2">de: <span class="line-through">R$ 74,90 </span> (21% off)</P>
+                            <p class="mb-2 text-xs text-gray-700">Termina em 2:09:46</p>
+                            <a href="" class="text-sm text-blue-900 hover:underline hover:text-orange-650 MB-2">Homem-Aranha: História de Vida</a>
+                            <p class="mb-8 text-sm">Esta oferta é exclusiva para membros do <a href="" class="text-xs text-blue-600 hover:underline hover:text-orange-650">Amazon Prime.</a></p>
+                            <button class="py-2 mx-3 text-xs bg-yellow-400 border border-yellow-500 rounded-md hover:bg-gold-200">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="flex flex-col w-1/2 px-8 py-4 border-b border-gray-300 md:w-1/4">
+                            <img src="img/livro11.jpg" alt="Livro 1" class="p-2 h-210 place-self-center">
+                            <p class="mt-10 text-red-700">R$ 34,89</p>
+                            <P class="TEXT-SM MB-2">de: <span class="line-through">R$ 49,90 </span> (30% off)</P>
+                            <p class="mb-2 text-xs text-gray-700">Termina em 2:09:46</p>
+                            <a href="" class="text-sm text-blue-900 hover:underline hover:text-orange-650 MB-2">Scott Pilgrim - Contra O Mundo - Volume - 1</a>
+                            <p class="mb-8 text-sm">Esta oferta é exclusiva para membros do <a href="" class="text-xs text-blue-600 hover:underline hover:text-orange-650">Amazon Prime.</a></p>
+                            <button class="py-2 mx-3 text-xs bg-yellow-400 border border-yellow-500 rounded-md hover:bg-gold-200">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="flex flex-col w-1/2 px-8 py-4 border-b border-gray-300 md:w-1/4">
+                            <img src="img/livro12.jpg" alt="Livro 1" class="p-2 h-210 place-self-center">
+                            <p class="mt-10 text-red-700">R$ 13,56</p>
+                            <P class="TEXT-SM MB-2">de: <span class="line-through">R$ 34,90 </span> (61% off)</P>
+                            <p class="mb-2 text-xs text-gray-700">Termina em 2:09:46</p>
+                            <a href="" class="text-sm text-blue-900 hover:underline hover:text-orange-650 MB-2">O homem mais rico da Babilônia</a>
+                            <p class="mb-8 text-sm">Esta oferta é exclusiva para membros do <a href="" class="text-xs text-blue-600 hover:underline hover:text-orange-650">Amazon Prime.</a></p>
+                            <button class="py-2 mx-3 text-xs bg-yellow-400 border border-yellow-500 rounded-md hover:bg-gold-200">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="flex flex-col text-white">
+        <!--Rodapé-->
+        <!--Footer Superior-->
+        <div class="py-4 text-sm text-center bg-dark-blue-400 hover:bg-darkblue-500">
+            <p>Voltar ao Início</p>
+        </div>
+        <!--Rodapé Intermediário-->
+        <div class="flex flex-wrap px-10 py-10 md:flex-no-wrap md:justify-around md:px-80 bg-dark-blue-700">
+            <div class="w-1/2 mb-4 md:w-auto md:mb-0">
+                <h4 class="mb-2 font-semibold">
+                    Conheça-nos
+                </h4>
+                <ul class="w-3/4 text-xs text-gray-200">
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Informações Corporativas</a>
+                    </li>
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Carreiras</a>
+                    </li>
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Comunicados à imprensa</a>
+                    </li>
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Comunidade</a>
+                    </li>
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Acessibilidade</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-1/2 mb-4 md:w-auto md:mb-0">
+                <h4 class="mb-2 font-semibold">
+                    Ganhe dinheiro conosco
+                </h4>
+                <ul class="w-3/4 text-xs text-gray-200">
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Publique seus livros</a>
+                    </li>
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Seja um associado</a>
+                    </li>
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Venda na Amazon</a>
+                    </li>
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Anuncie seus produtos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-1/2 mb-4 md:w-auto md:mb-0">
+                <h4 class="mb-2 font-semibold">
+                    Deixe-nos ajudá-lo
+                </h4>
+                <ul class="w-3/4 text-xs text-gray-200">
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Sua conta</a>
+                    </li>
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Frete e prazo de entrega</a>
+                    </li>
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Devoluções e reembolsos</a>
+                    </li>
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Gerencie seu conteúdo e dispositivos</a>
+                    </li>
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Ajuda</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-1/2 mb-4 md:w-auto md:mb-0">
+                <h4 class="mb-2 font-semibold">
+                    Pagamento
+                </h4>
+                <ul class="w-3/4 text-xs text-gray-200">
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Amazon e COVID-19</a>
+                    </li>
+                    <li class="mb-2 leading-4 hover:underline">
+                        <a href="">Cartões de crédito, cartões de débito e Boleto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Rodapé Intermediário-->
+        <div class="flex-col items-center hidden pt-6 pb-4 border-t border-gray-700 md:flex bg-dark-blue-700">
+            <img src="img/amazon_logo.png" alt="Amazon" class="w-20">
+            <ul class="flex flex-wrap justify-center w-3/4 pt-4 text-xs text-gray-200">
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Austrália</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Alemanha</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Canadá</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">China</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Cingapura</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Espanha</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Estados Unidos</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">França</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Holanda</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Índia</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Itália</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Japão</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">México</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Polônia</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Emirados Árabes Unidos</a>
+            </li>
+            <li class="px-2 border-r border-gray-600 hover:underline">
+                <a href="">Reino Unido</a>
+            </li>
+            <li class="px-2 hover:underline">
+                <a href="">Turquia</a>
+            </li>
+            </ul>
+            <div class="flex pt-2 text-xs">
+                <span class="mr-2 text-gray-200">E não se esqueça</span>
+                <a href="" class="text-gray-200 hover:underline"> Amazon Web Services</a>
+            </div>
+        </div>
+        <!--Rodapé Inferior-->
+        <div class="flex flex-col items-center pt-8 text-xs bg-dark-blue-950 md:pt-2">
+            <div class="flex-col mb-10 felx md:flex-row">
+                <ul class="flex">
+                    <li class="px-2 text-center border-gray-600 border-none md:border-r md:text-left hover:underline">
+                        <a href="">Condições de uso</a>
+                    </li>
+                    <li class="px-2 text-center border-gray-600 border-none md:border-r md:text-left hover:underline">
+                        <a href="">Notificação de Privacidade</a>
+                    </li>
+                    <li class="px-2 text-center border-gray-600 border-none md:border-r md:text-left hover:underline">
+                        <a href="">Cookies</a>
+                    </li>
+                    <li class="px-2 text-center border-gray-600 border-none md:border-r md:text-left hover:underline">
+                        <a href="">Anúncios Baseados em Interesses</a>
+                    </li>
+                    <span class="hidden ml-4 text-center text-gray-200 md:block mt-7 md:text-left md:mt-0">
+                        © 2012-2021, Amazon.com, Inc. ou suas afiliadas
+                    </span>
+                </ul>
+                <span class="mt-2 ml-16 text-center text-gray-200 md:hidden">
+                    © 2012-2021, Amazon.com, Inc. ou suas afiliadas
+                </span>
+            </div>
+            <p class="hidden mb-10 text-gray-400 md:block">Amazon Serviços de Varejo do Brasil Ltda. | CNPJ 15.436.940/0001-03</p>
+            <p class="hidden mb-10 text-gray-400 md:block">Av. Juscelino Kubitschek, 2041, Torre E, 18° andar - São Paulo CEP: 04543-011| <a href="" class="text-blue-900">Fale conosco|</a> ajuda-amazon@amazon.com.br</p>
+            <p class="hidden mb-10 text-gray-400 md:block">Formas de pagamento aceitas: cartões de crédito (Visa, MasterCard, Elo e American Express) e boleto.</p>
+        </div>
+    </footer>
+</body>
+</html>
